@@ -1,0 +1,27 @@
+.emp-form {
+  height: 250px;
+  width: 35%;
+  max-width: 400px;
+  background-color: #aefeff;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 5px;
+
+  form {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__submit-btn {
+    background-color: #072227;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: auto;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

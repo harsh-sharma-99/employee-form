@@ -1,0 +1,25 @@
+.emp-input-with-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &__label {
+    width: 20%;
+    margin-right: 0.5rem;
+    font-size: 12px;
+    font-weight: 500;
+    color: #072227;
+  }
+
+  &__input {
+    height: 25px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #4fbdba;
+    outline: none;
+    background-color: #072227;
+    color: white;
+  }
+}

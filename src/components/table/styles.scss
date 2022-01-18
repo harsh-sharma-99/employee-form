@@ -1,0 +1,19 @@
+.emp-table {
+  margin-top: 1rem;
+  color: #072227;
+
+  table {
+    width: 100%;
+  }
+
+  &__column-width {
+    text-align: left;
+  }
+
+  &__column-result {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100px;
+  }
+}
