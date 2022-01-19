@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { memo, useRef, useState } from "react";
 import "./styles.scss";
 import InputWithLabel from "./../input/index";
 
@@ -9,7 +9,10 @@ const Form = ({ userData, setUserData }) => {
   const [salary, setSalary] = useState("");
   const [age, setAge] = useState("");
   const [image, setImage] = useState("");
+  const formRef = useRef();
+
   const clearFields = () => {
+    formRef.current.reset();
     setName("");
     setSalary("");
     setImage("");
@@ -45,7 +48,7 @@ const Form = ({ userData, setUserData }) => {
 
   return (
     <div className={rootClassName}>
-      <form onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         <div className={`${rootClassName}__input-wrapper`}>
           <InputWithLabel
             label="Name"
@@ -73,7 +76,7 @@ const Form = ({ userData, setUserData }) => {
           <InputWithLabel
             label="Photo"
             type={"file"}
-            onChange={(e) => setImage(e.target.files[0])}
+            onChange={(e) => setImage(e.target.files[0].name)}
           />
         </div>
         <button type="submit" className={`${rootClassName}__submit-btn`}>

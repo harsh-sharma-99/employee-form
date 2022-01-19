@@ -31,7 +31,7 @@ const Table = ({ userData, searchValue }) => {
                 {emp.employee_salary}
               </td>
               <td className={`${rootClassName}__column-result`}>
-                {emp.profile_image?.name ?? "No Image"}
+                {emp.profile_image === "" ? "No Image" : emp.profile_image}
               </td>
             </tr>
           ))}
